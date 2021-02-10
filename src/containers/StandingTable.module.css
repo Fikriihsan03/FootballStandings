@@ -1,0 +1,14 @@
+.Club {
+  padding-right: 20vh;
+}
+.Poin {
+  padding: 5px 12.5px 5px 12.5px;
+}
+@media (min-width: 500px) {
+  .Club {
+    padding-right: 110vh;
+  }
+  .Poin {
+    padding: 10px 25px 10px 25px;
+  }
+}
