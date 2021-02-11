@@ -6,7 +6,7 @@ const StandingTable = () => {
   const [standings, setStandings] = useState([]);
   useEffect(() => {
     fetch(
-      "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=4328&s=2020-2021"
+      "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=4331&s=2020-2021"
     )
       .then((response) => response.json())
       .then((club) => {

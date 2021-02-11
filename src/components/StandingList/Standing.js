@@ -2,6 +2,7 @@ import classes from "./Standing.module.css";
 
 const Standing = ({
   id,
+  image,
   name,
   played,
   win,
@@ -15,7 +16,8 @@ const Standing = ({
   return (
     <tr className={classes.Standing}>
       <td style={{ textAlign: "left" }}>
-        {id}. {name}
+        {id}.<img style={{ margin: "20px" }} src={image} alt="strTeamBadge" />{" "}
+        {name}
       </td>
       <td>{played}</td>
       <td>{win}</td>

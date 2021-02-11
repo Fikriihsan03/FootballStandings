@@ -6,17 +6,18 @@ const StandingList = ({ standings }) => {
       {standings.map((_, i) => {
         return (
           <Standing
-            key={[i]}
+            key={i}
             id={[i + 1]}
-            name={standings[i].name}
-            played={standings[i].played}
-            win={standings[i].win}
-            draw={standings[i].draw}
-            loss={standings[i].loss}
-            goalsFor={standings[i].goalsfor}
-            goalsAgainist={standings[i].goalsagainst}
-            goalsDifference={standings[i].goalsdifference}
-            total={standings[i].total}
+            image={standings[i].strTeamBadge}
+            name={standings[i].strTeam}
+            played={standings[i].intPlayed}
+            win={standings[i].intWin}
+            draw={standings[i].intDraw}
+            loss={standings[i].intLoss}
+            goalsFor={standings[i].intGoalsFor}
+            goalsAgainist={standings[i].intGoalsAgainst}
+            goalsDifference={standings[i].intGoalDifference}
+            total={standings[i].intPoints}
             email={standings[i].email}
           />
         );
