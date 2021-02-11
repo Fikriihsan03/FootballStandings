@@ -16,7 +16,7 @@ const Standing = ({
   return (
     <tr className={classes.Standing}>
       <td style={{ textAlign: "left" }}>
-        {id}.<img style={{ margin: "20px" }} src={image} alt="strTeamBadge" />{" "}
+        {id}.<img style={{ margin: "8px" }} src={image} alt="strTeamBadge" />{" "}
         {name}
       </td>
       <td>{played}</td>
