@@ -1,6 +1,6 @@
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
-const Navigation = () => {
+const Navigation = ({ changeCode }) => {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -11,14 +11,19 @@ const Navigation = () => {
             <Nav.Link href="#features">Klasemen</Nav.Link>
             <Nav.Link href="#pricing">Jadwal pertandingan</Nav.Link>
             <NavDropdown title="Pilih Liga" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
+              <NavDropdown.Item onClick={() => changeCode("4328")}>
                 Liga inggris
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Liga jerman
+              <NavDropdown.Item onClick={() => changeCode("4331")}>
+                BundlesLiga
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">La Liga</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4">Serie A</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => changeCode("4335")}>
+                {" "}
+                La Liga
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => changeCode("4332")}>
+                Serie A
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

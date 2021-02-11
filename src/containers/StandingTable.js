@@ -2,19 +2,17 @@ import React, { useState, useEffect } from "react";
 import StandingList from "../components/StandingList/StandingList";
 import classes from "./StandingTable.module.css";
 
-const StandingTable = () => {
+const StandingTable = ({ leagueCode }) => {
   const [standings, setStandings] = useState([]);
+  const url = `https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=${leagueCode}&s=2020-2021`;
   useEffect(() => {
-    fetch(
-      "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=4331&s=2020-2021"
-    )
+    fetch(url)
       .then((response) => response.json())
       .then((club) => {
         console.log(club.table);
         setStandings(club.table);
       });
-    // console.log(count)
-  }, []);
+  }, [leagueCode]);
   return !standings.length ? (
     <h1>Loading...</h1>
   ) : (
