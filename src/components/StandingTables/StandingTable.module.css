@@ -1,0 +1,17 @@
+.Club {
+  padding-right: 30px;
+}
+.Poin {
+  padding: 5px 12.5px 5px 12.5px;
+}
+@media (min-width: 500px) {
+  .Table {
+    margin: 0 auto;
+  }
+  .Club {
+    padding-right: 60vh;
+  }
+  .Poin {
+    padding: 10px 25px 10px 25px;
+  }
+}
